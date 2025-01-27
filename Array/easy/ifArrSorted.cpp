@@ -1,18 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void check(vector<int>arr,int n){
-    int f;
+int check(vector<int>arr,int n){
+  
     for(int i=0;i<n-1;i++){
-        f=1;
         if(arr[i]>arr[i+1]){
-            f=0;
-            break;
+            return 0;
         }
     }
-        if(f) cout<<"sorted"<<endl;
-        else cout<<"not sorted"<<endl;
-    
+    return 1;
 }
 
 
@@ -26,5 +22,5 @@ int main(){
         cin>>arr[i];
     }
     
-    check(arr,n); 
+    cout<<check(arr,n)<<endl; 
 }
